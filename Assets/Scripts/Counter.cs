@@ -6,16 +6,20 @@ using System;
 
 public class Counter : MonoBehaviour
 {
+    public Image Button_Image;
 
-    public Text Text_mmsss;    
-    public Text Text_ff;                         //デジタルテキストの取得用変数
+    public Sprite Sprite_Start;
+    public Sprite Sprite_Stop;
+    public Text Text_StartStop;
+    public Text Text_mmsss;
+    public Text Text_ff;
     private float movetime;                          //稼働時間用変数
     private bool moving;                             //ストップウォッチ稼働フラグ
 
-void Start(){
-    Text_mmsss.text = "00:00";
-    Text_ff.text = ".00";
-}
+    void Start()
+    {
+        TimeReset();
+    }
     void Update()
     {
         //スタートボタンを押したら稼働する
@@ -40,15 +44,25 @@ void Start(){
     {
         moving = false;
     }
+
+    ///StartとStopボタンを一つで使う場合
+    public void WatchStartStop()
+    {
+        moving = !moving;
+        if (moving)
+        {
+            Text_StartStop.text = "Stop";
+            Button_Image.sprite = Sprite_Stop;
+        }
+        else
+        {
+            Text_StartStop.text = "Start";
+            Button_Image.sprite = Sprite_Start;
+        }
+    }
     //ストップウォッチのリセット
     public void TimeReset()
     {
-        //稼働中はリセットを無効にする
-        if (moving)
-        {
-            return;
-        }
-
         movetime = 0;
         Text_mmsss.text = "00:00";
         Text_ff.text = ".00";
@@ -59,7 +73,6 @@ void Start(){
     private void TimeSet()
     {
         //各種変数
-        string timetext_mmss = null;
         int provtime = 0;
         int twodecimal = 0;
 
@@ -71,7 +84,7 @@ void Start(){
         TimeSpan ts = new TimeSpan(0, 0, provtime);
         Text_mmsss.text = ts.ToString(@"mm\:ss");
         //切り離した小数点以下を文字化する
-        Text_ff.text = "."+twodecimal.ToString("D2");
+        Text_ff.text = "." + twodecimal.ToString("D2");
 
     }
 }
