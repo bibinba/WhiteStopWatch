@@ -5,10 +5,11 @@
 ![](https://cdn-ak.f.st-hatena.com/images/fotolife/b/bibinbaleo/20200724/20200724215708.png "Mac.app")
 
 # ダウンロード
-[Release]()からダウンロードできます。
+[Release](https://github.com/bibinba/WhiteStopWatch/releases)からダウンロードできます。
 - Mac.app
 
 # ThirdParty
+- [ボタン効果音/OtoLogic(CC BY 4.0)]()
 - [Robotフォント（Apache license version 2.0.）](https://fonts.google.com/specimen/Roboto?preview.text=01:10.55&preview.text_type=custom)
 
 - [Icons(Apache license version 2.0.)](https://material.io/resources/icons/?style=baseline)
