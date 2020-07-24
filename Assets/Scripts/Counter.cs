@@ -7,14 +7,13 @@ using System;
 public class Counter : MonoBehaviour
 {
     public Image Button_Image;
-
     public Sprite Sprite_Start;
     public Sprite Sprite_Stop;
     public Text Text_StartStop;
     public Text Text_mmsss;
     public Text Text_ff;
-    private float movetime;                          //稼働時間用変数
-    private bool moving;                             //ストップウォッチ稼働フラグ
+    private float movetime;  //稼働時間用変数
+    private bool moving;     //ストップウォッチ稼働フラグ
 
     void Start()
     {
@@ -80,7 +79,7 @@ public class Counter : MonoBehaviour
         provtime = Mathf.FloorToInt(movetime);
         twodecimal = Mathf.FloorToInt((movetime - provtime) * 100);
 
-        //TimeSpanを使って　00：00：00.　の文字列を作る
+        //TimeSpanを使って　00：00Ï　の文字列を作る
         TimeSpan ts = new TimeSpan(0, 0, provtime);
         Text_mmsss.text = ts.ToString(@"mm\:ss");
         //切り離した小数点以下を文字化する
