@@ -20,8 +20,6 @@ https://bibinba.github.io/WhiteStopWatch_WebGL/
 
 - [Icons(Apache license version 2.0.)](https://material.io/resources/icons/?style=baseline)
 
-- [ボタン効果音/OtoLogic(CC BY 4.0)](https://otologic.jp/free/se/motion-pop01.html)
-- 
 - [ボタン効果音/MixedRealityToolkit-Unity（MIT License）](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/SDK/StandardAssets/Audio)
 
 
