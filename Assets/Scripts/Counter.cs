@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+///reference：http://kerotan-factory.xblog.jp/article/473452484.html
+
 public class Counter : MonoBehaviour
 {
     public Image Button_Image;
